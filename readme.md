@@ -9,3 +9,7 @@
 - a pair for key: value should appear showing your token.
 
 Example for token API : {mfa.jxxxSfsexxxBtHUrsixxxw1MD2XedIuwexxxFh7fdTAQsFxxx8Wkrjfwmxxxl5zvxxxhFkxxygwjdxxxaNp}
+
+## Set your CLIENT_DISCORD_TOKEN on env:
+
+$env:CLIENT_DISCORD_TOKEN="sasdqjwkeqwej"
