@@ -1,6 +1,5 @@
 const path          = require('path');
 const fs            = require('fs');
-const config = require("./config.json")
 require('dotenv').config(); //initialize dotenv
 const Discord = require('discord.js-self'); //import discord.js
 
