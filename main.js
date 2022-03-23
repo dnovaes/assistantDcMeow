@@ -58,9 +58,6 @@ client.on('message', msg => {
 //make sure this line is the last line
 client.login(process.env.DISCORD_CLIENT_TOKEN);
 
-//$env:NODE_ENV
-//set NODE_ENV=production&&node main.js
-
 //-------------
 
 function getAnswerOnPokemonRarity(rarityColor) {
