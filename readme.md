@@ -10,6 +10,6 @@
 
 Example for token API : {mfa.jxxxSfsexxxBtHUrsixxxw1MD2XedIuwexxxFh7fdTAQsFxxx8Wkrjfwmxxxl5zvxxxhFkxxygwjdxxxaNp}
 
-## Set your CLIENT_DISCORD_TOKEN on package.json inside of npm start:
+## Set your CLIENT_DISCORD_TOKEN on config.env file:
 
 CLIENT_DISCORD_TOKEN="sasdqjwkeqwej"

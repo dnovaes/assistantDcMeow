@@ -1,6 +1,6 @@
 const path          = require('path');
 const fs            = require('fs');
-require('dotenv').config(); //initialize dotenv
+require('dotenv').config({path:__dirname+'/config.env'}); //initialize dotenv
 const Discord = require('discord.js-self'); //import discord.js
 
 const client = new Discord.Client(); //create new client
@@ -56,7 +56,7 @@ client.on('message', msg => {
 });
 
 //make sure this line is the last line
-client.login(process.env.DISCORD_CLIENT_TOKEN);
+client.login(process.env.DISCORD_CLIENT_TOKEN)
 
 //-------------
 
@@ -86,14 +86,14 @@ function handleResponseOnBagaceiraPokemeow(msg) {
     console.log(`Got response) Author: ${msg.author}, Channel: ${msg.channel}\nMessage: ${msg.content}\n`)
     if  (
             msg.author.id == POKEMEOWHELPER_BOT_ID && 
-            (msg.content.indexOf("Neodark**\`, your ;p") != -1) &&
+            (msg.content.indexOf(`${client.user.username}**\`, your ;p`) != -1) &&
             (msg.content.indexOf("ready") != -1)
         ) {
         setTimeout(() => {
             msg.channel.send(";p")
         }, randomDelayAnswer);
         //executeSafely(msg.channel.send, randomDelayAnswer, ";p");
-    } else if (msg.author.id == POKEMEOW_BOT_ID && (msg.content.indexOf("Neodark** found") != -1)) {
+    } else if (msg.author.id == POKEMEOW_BOT_ID && (msg.content.indexOf(`${client.user.username}** found`) != -1)) {
         try {
             let msgAttached = msg.embeds[0]
             let response = getAnswerOnPokemonRarity(msgAttached.color)
