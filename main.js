@@ -82,7 +82,7 @@ function getAnswerOnPokemonRarity(rarityColor) {
 }
 
 function handleResponseOnBagaceiraPokemeow(msg) {
-    let randomDelayAnswer = Math.ceil(Math.random()*2000)
+    let randomDelayAnswer = Math.ceil(Math.random()*2300)
     console.log(`Got response) Author: ${msg.author}, Channel: ${msg.channel}\nMessage: ${msg.content}\n`)
     if  (
             msg.author.id == POKEMEOWHELPER_BOT_ID && 
