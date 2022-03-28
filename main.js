@@ -1,9 +1,9 @@
 const path          = require('path');
 const fs            = require('fs');
 require('dotenv').config({path:__dirname+'/config.env'}); //initialize dotenv
-const Discord = require('discord.js-self'); //import discord.js
-
-const client = new Discord.Client(); //create new client
+const Discord       = require('discord.js-self'); //import discord.js
+const client        = new Discord.Client(); //create new client
+const player = require('play-sound')(opts = {});
 
 //constants
 const BAGACEIRA_CHANNEL_POKEMEOW_ID = "910643877273280534"
@@ -15,10 +15,14 @@ const RARE = "16484616"
 const UNCOMMON = "1291495"
 const COMMON = "546299"
 
+const CAPTCHA_CODE_SOUND = "pikachu.mp3"
+//https://play.pokemonshowdown.com/audio/cries/
+
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}: ${client.user}!`);
-  console.log(client.user)
+    console.log(`Logged in as ${client.user.tag}: ${client.user}!`);
+    console.log(client.user)
 });
+
 
 /*
 message structure:
@@ -116,6 +120,9 @@ function handleResponseOnBagaceiraPokemeow(msg) {
         ) {
             console.log("CAPTCHA CODE")
             msg.channel.send(`1203013`)
+            player.play(`./media/${CAPTCHA_CODE_SOUND}`, function(err){
+                if (err) throw err 
+            })
             //TODO: mark user
             //msg.channel.send(`@${client.user.id}, @${client.user.username}`)
         }
