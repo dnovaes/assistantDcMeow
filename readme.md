@@ -13,3 +13,12 @@ Example for token API : {mfa.jxxxSfsexxxBtHUrsixxxw1MD2XedIuwexxxFh7fdTAQsFxxx8W
 ## Set your CLIENT_DISCORD_TOKEN on config.env file:
 
 CLIENT_DISCORD_TOKEN="sasdqjwkeqwej"
+
+
+## How to Run:
+
+With the files downloaded, open cmd and:
+1) Go to the folder
+2) open config.env and put your client token from discord
+3) run on terminal: npm install
+4) run on terminal: node main 
